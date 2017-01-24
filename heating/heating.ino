@@ -54,51 +54,7 @@ BLYNK_WRITE(V0) {// Do this when off button pressed
     }
 }
 
-BLYNK_WRITE(V1){   // Get index of timer choice
-  switch (param.asInt())
-    {
-      case 1: { // Item 1
-        Serial.println("30 minutes heating selected");
 
-        heat_action(30000, 1);
-        break;
-      }
-
-      case 2: { // Item 2
-        Serial.println("45 minutes heating selected");
-
-        heat_action(45000, 1);
-
-        break;
-      }
-
-       case 3: { // Item 2
-        Serial.println("60 minutes heating selected");
-
-        heat_action(60000, 1);
-
-        break;
-      }
-
-       case 4: { // Item 2
-        Serial.println("90 minutes heating selected");
-
-        heat_action(90000, 1);
-
-        break;
-      }
-
-       case 5: { // Item 2
-	    Serial.println("120 minutes heating selected");
-
-	    heat_action(120000, 1);
-
-	   break;
-      }
-
-
-  }
-}
 
 BLYNK_WRITE(V3) {// Read 30 minute button
 
